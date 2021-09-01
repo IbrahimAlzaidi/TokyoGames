@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="128dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    android:elevation="@dimen/elevationSmall"
+    app:cardCornerRadius="@dimen/elevationSmall"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/country_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textMedium"
+            android:textColor="@color/darkText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="USA" />
+
+        <ImageView
+            android:layout_width="42dp"
+            android:layout_height="43dp"
+            android:src="@drawable/ic_olym_foreground"
+            app:layout_constraintBottom_toTopOf="@+id/gold_medal"
+            app:layout_constraintEnd_toEndOf="@+id/rank"
+            app:layout_constraintRight_toLeftOf="@+id/country_name"
+            app:layout_constraintStart_toStartOf="@+id/rank"
+            app:layout_constraintTop_toTopOf="@+id/country_name" />
+
+        <TextView
+            android:id="@+id/rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textMedium"
+            android:textColor="@color/darkText"
+            android:text="Rank"
+            app:layout_constraintEnd_toStartOf="@+id/gold_medal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Rank" />
+
+        <TextView
+            android:id="@+id/rank_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textLarge"
+            android:textColor="@color/darkText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/rank"
+            app:layout_constraintStart_toStartOf="@+id/rank"
+            app:layout_constraintTop_toBottomOf="@+id/rank"
+            tools:text="Rank" />
+
+
+        <TextView
+            android:id="@+id/gold_medal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:labelFor="@id/gold_medal"
+            android:text="Gold Medal"
+            android:textColor="@color/darkText"
+            android:textSize="@dimen/textMedium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/silver_medal"
+            app:layout_constraintStart_toEndOf="@+id/rank"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Gold" />
+
+        <TextView
+            android:id="@+id/gold_medal_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/darkText"
+            android:labelFor="@id/gold_medal"
+            android:textSize="@dimen/textLarge"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/gold_medal"
+            app:layout_constraintStart_toStartOf="@+id/gold_medal"
+            app:layout_constraintTop_toBottomOf="@+id/gold_medal"
+            tools:text="Gold" />
+
+        <TextView
+            android:id="@+id/silver_medal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textMedium"
+            android:textColor="@color/darkText"
+            android:text="Silver"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/bronze_medal"
+            app:layout_constraintStart_toEndOf="@id/gold_medal"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Silver" />
+
+        <TextView
+            android:id="@+id/silver_medal_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textLarge"
+            android:textColor="@color/darkText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/silver_medal"
+            app:layout_constraintStart_toStartOf="@+id/silver_medal"
+            app:layout_constraintTop_toBottomOf="@+id/silver_medal"
+            tools:text="Silver" />
+
+        <TextView
+            android:id="@+id/bronze_medal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textMedium"
+            android:text="Bronze"
+            android:textColor="@color/darkText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/silver_medal"
+            app:layout_constraintEnd_toStartOf="@id/total_rank"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Bronze" />
+
+        <TextView
+            android:id="@+id/bronze_medal_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textLarge"
+            android:textColor="@color/darkText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/bronze_medal"
+            app:layout_constraintStart_toStartOf="@+id/bronze_medal"
+            app:layout_constraintTop_toBottomOf="@+id/bronze_medal"
+            tools:text="Bronze" />
+
+
+        <TextView
+            android:id="@+id/total_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textMedium"
+            android:textColor="@color/darkText"
+            android:text="Total Rank"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bronze_medal"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Total Rank" />
+
+        <TextView
+            android:id="@+id/total_rank_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textLarge"
+            android:textColor="@color/darkText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/total_rank"
+            app:layout_constraintStart_toStartOf="@+id/total_rank"
+            app:layout_constraintTop_toBottomOf="@+id/total_rank"
+            tools:text="Total Rank" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
